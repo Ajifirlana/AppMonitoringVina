@@ -35,26 +35,20 @@
   <div class="col-md-12">
     <div class="box box-primary">
       <div class="box-header with-border">
-        <h3 class="box-title">Tambah Kegiatan</h3>
+        <h3 class="box-title">Detail Kegiatan</h3>
       </div>
-      <section class="content-header">
-          <small><?php
-          echo $this->session->flashdata('msg');
-          ?></small>
-      </section>
-
     <table id="kategori" class="table table-bordered table-striped">
       <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
         <div class="box-body">
          
           <div class="form-group">
             <label>Nama Penugasan</label>
-              <input type="text" class="form-control" name="capaian" value="<?= $result->capaian?>" required="">
+              <input type="text" class="form-control" name="capaian" value="<?= $result->capaian?>" readonly="">
           
           </div>
           <div class="form-group">
             <label>No Surat Tugas</label>
-              <input type="text" class="form-control" name="keterangan" value="<?= $result->keterangan?>" required="">
+              <input type="text" class="form-control" name="keterangan" value="<?= $result->keterangan?>" readonly="">
           
           </div>
 
@@ -63,7 +57,7 @@
             <?php
             $tgl = date('Y-m-d');
             { ?>
-            <input type="date" class="form-control" name="created_at" required="" value="<?php echo $tgl; ?>">
+            <input type="date" class="form-control" readonly=""name="created_at" required="" value="<?php echo $tgl; ?>">
             <?php }?>
           </div>
 
@@ -72,28 +66,28 @@
             <?php
             $tgl = date('Y-m-d');
             { ?>
-            <input type="date" class="form-control" required="" value="<?php echo $tgl; ?>">
+            <input type="date" class="form-control"readonly="" required="" value="<?php echo $tgl; ?>">
             <?php }?>
           </div>
                     <div class="form-group">
             <label>Total Hari Kerja</label>
-              <input type="number" class="form-control" required="">
+              <input type="number" class="form-control" readonly="">
           
           </div>   
            <div class="form-group">
             <label>Dana Kegiatan</label>
-              <input type="number" class="form-control" required="">
+              <input type="number" class="form-control" readonly="">
           
           </div>
    
            <div class="form-group">
             <label>Kota Tujuan</label>
-              <input type="text" class="form-control" required="">
+              <input type="text" class="form-control" readonly="">
           
           </div>
             <div class="form-group">
             <label>No Laporan</label>
-              <input type="text" class="form-control" required="">
+              <input type="text" class="form-control" readonly="">
           
           </div>
           <div class="form-group">
@@ -106,7 +100,7 @@
 
 
     
-          <input type="text" name="" value="<?= $result->kategori?>"  class="form-control"  >
+          <input type="text" name="" value="<?= $result->kategori?>"readonly=""  class="form-control"  >
       
 
           </div>
