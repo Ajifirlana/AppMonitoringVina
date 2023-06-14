@@ -304,6 +304,8 @@ if (isset($_POST['btnsimpan'])) {
               $username            = htmlentities(strip_tags($_POST['username']));
               $create_by            = htmlentities(strip_tags($_POST['create_by']));
              $kategori            = htmlentities(strip_tags($_POST['kategori']));
+             $tgl_mulai_tugas            = htmlentities(strip_tags($_POST['tgl_mulai_tugas']));
+             $total_hari_kerja            = htmlentities(strip_tags($_POST['total_hari_kerja']));
              
 
               $file_size = 5500; //5 MB
@@ -343,7 +345,12 @@ if (isset($_POST['btnsimpan'])) {
                     'created_at' => $tgl,
                     'create_by' => $create_by,
                     'image' => $image,
-                    'username' => $username);
+                    'username' => $username,
+                    'tgl_mulai_tugas'=>$tgl_mulai_tugas,
+                    'total_hari_kerja'=>$total_hari_kerja,
+                    'dana_kegiatan'=>htmlentities(strip_tags($_POST['dana_kegiatan'])),
+                    'kota_tujuan'=>htmlentities(strip_tags($_POST['kota_tujuan'])),'no_laporan'=>htmlentities(strip_tags($_POST['no_laporan']))
+                  );
                     $this->db->insert('kegiatan', $data);
                     $this->session->set_flashdata('msg',
                        '

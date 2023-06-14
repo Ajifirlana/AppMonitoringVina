@@ -72,28 +72,28 @@
             <?php
             $tgl = date('Y-m-d');
             { ?>
-            <input type="date" class="form-control" required="" value="<?php echo $tgl; ?>">
+            <input type="date" class="form-control" required="" name="tgl_mulai_tugas" value="<?php echo $tgl; ?>">
             <?php }?>
           </div>
                     <div class="form-group">
             <label>Total Hari Kerja</label>
-              <input type="number" class="form-control" required="">
+              <input type="number" class="form-control" name="total_hari_kerja" required="">
           
           </div>   
            <div class="form-group">
             <label>Dana Kegiatan</label>
-              <input type="number" class="form-control" required="">
+              <input type="number" name="dana_kegiatan" class="form-control" required="">
           
           </div>
    
            <div class="form-group">
             <label>Kota Tujuan</label>
-              <input type="text" class="form-control" required="">
+              <input type="text" class="form-control" name="kota_tujuan" required="">
           
           </div>
             <div class="form-group">
             <label>No Laporan</label>
-              <input type="text" class="form-control" required="">
+              <input type="text" name="no_laporan" class="form-control" required="">
           
           </div>
           <div class="form-group">
