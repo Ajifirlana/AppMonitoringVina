@@ -43,21 +43,25 @@ INSERT INTO `databidang` (`id_komentar`, `nama_lengkap`, `isi_komentar`, `id_ber
 CREATE TABLE IF NOT EXISTS `kegiatan` (
   `id_berita` int(11) NOT NULL AUTO_INCREMENT,
   `capaian` varchar(10000) NOT NULL,
-  `kategori` varchar(50) NOT NULL,
+  `kategori` varchar(50) DEFAULT NULL,
   `keterangan` varchar(1000) NOT NULL,
+  `tgl_mulai_tugas` varchar(50) NOT NULL,
+  `total_hari_kerja` int(1) NOT NULL DEFAULT '0',
+  `dana_kegiatan` varchar(50) NOT NULL DEFAULT '0',
+  `kota_tujuan` varchar(50) NOT NULL DEFAULT '0',
+  `no_laporan` varchar(50) NOT NULL DEFAULT '0',
   `anggota` varchar(50) NOT NULL,
   `image` varchar(100) DEFAULT NULL,
   `created_at` date NOT NULL,
   `username` varchar(100) NOT NULL,
   `create_by` varchar(10) NOT NULL,
   PRIMARY KEY (`id_berita`)
-) ENGINE=MyISAM AUTO_INCREMENT=240 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=242 DEFAULT CHARSET=latin1;
 
--- Membuang data untuk tabel monitoring tugas.kegiatan: 2 rows
+-- Membuang data untuk tabel monitoring tugas.kegiatan: 1 rows
 /*!40000 ALTER TABLE `kegiatan` DISABLE KEYS */;
-INSERT INTO `kegiatan` (`id_berita`, `capaian`, `kategori`, `keterangan`, `anggota`, `image`, `created_at`, `username`, `create_by`) VALUES
-	(238, 'tes', 'Promosi  kesehatan  (promkes)', 'tess', '', 'login.png', '2023-06-14', 'Admin', '1'),
-	(239, 'nama penugas', 'Promosi  kesehatan  (promkes)', '72657/AJI', '', 'login1.png', '2023-06-14', 'Admin', '1');
+INSERT INTO `kegiatan` (`id_berita`, `capaian`, `kategori`, `keterangan`, `tgl_mulai_tugas`, `total_hari_kerja`, `dana_kegiatan`, `kota_tujuan`, `no_laporan`, `anggota`, `image`, `created_at`, `username`, `create_by`) VALUES
+	(241, 'Nama Penugasan', 'Nama Kegiatan', 'No Surat Tugas', '2023-06-14', 3, '10000', 'JAKARTA', 'SRT/101', '', 'login2.png', '2023-06-14', 'Admin', '1');
 /*!40000 ALTER TABLE `kegiatan` ENABLE KEYS */;
 
 -- membuang struktur untuk table monitoring tugas.kegiatan_user
