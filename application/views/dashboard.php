@@ -118,7 +118,7 @@
                  <a data-toggle="modal" data-target="#modal-edit<?=$row->id_berita;?>" button class="btn btn-info btn-flat btn-xs" data-popup="tooltip" data-placement="top" title="Edit Data"><i class="fa fa-pencil-square-o"></i></a>
 
  <a data-toggle="modal" data-target="#modal-hapus<?=$row->id_berita;?>" button class="btn btn-danger btn-flat btn-xs" data-popup="tooltip" data-placement="top" title="Hapus Data"><i class="fa fa-trash"></i></a>
-
+<a button class="btn btn-warning btn-flat btn-xs ml-2" href="<?php echo base_url('dashboard/detail_kegiatan/'.$row->id_berita) ?>"><i class="fa fa-eye"></i></a>
             </td>
           </tr>
           <?php $no++; } ?>

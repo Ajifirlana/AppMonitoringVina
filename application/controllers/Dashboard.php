@@ -27,6 +27,13 @@ $data['dtbidang'] = $this->model_berita->admin_dtbidang();
 $this->load->view('dashboard', $data);
         }
 
+public function detail_kegiatan($id_berita){
+
+$data['dtbidang'] = $this->model_berita->admin_dtbidang();
+$data['result'] = $this->model_berita->detail_kegiatan($id_berita);
+  $this->load->view('detail_kegiatan', $data);
+
+}
 public function menu_utama(){
 
 $data['total_data'] = $this->model_berita->hitungdata();

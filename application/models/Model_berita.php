@@ -115,127 +115,13 @@ var $gallery_path_url;
 		return $query;		
 	}
 
-	public function all(){
- $query = $this->db->query("SELECT * FROM kegiatan ORDER BY id_berita DESC LIMIT 5 ");
-		return $query;
+	public function detail_kegiatan($id){
+ 			$this->db->select('*');
+			$this->db->from('kegiatan');
+			$this->db->where('id_berita',$id);
+			return $this->db->get()->row();
 	}
 
-	public function internasional1(){
- $query = $this->db->get('berita');
- $query = $this->db->query("SELECT * FROM berita WHERE kategori = 'internasional' ORDER BY id_berita DESC LIMIT 1 ");
- return $query->result();
-    
-	}
-
-public function teknologi1(){
- $query = $this->db->get('berita');
- $query = $this->db->query("SELECT * FROM berita WHERE kategori = 'teknologi' ORDER BY id_berita DESC LIMIT 1 ");
- return $query->result();
-    
-	}
-	public function nasional1(){
- $query = $this->db->get('berita');
- $query = $this->db->query("SELECT * FROM berita WHERE kategori = 'nasional' ORDER BY id_berita DESC LIMIT 1 ");
- return $query->result();
-
-
-    
-	}
-
-	public function beritaterbaruinter(){
-
- $query = $this->db->query("SELECT * FROM berita  ORDER BY id_berita DESC LIMIT 5 ");
- return $query->result();
-
-
-    
-	}
-
-
-
-	public function semuaberinter(){
- $query = $this->db->get('berita');
- $query = $this->db->query("SELECT * FROM berita WHERE kategori = 'internasional'  ORDER BY id_berita DESC LIMIT 10 ");
- return $query->result();
-
-
-    
-	}
-
-	public function allbernasional(){
- $query = $this->db->get('berita');
- $query = $this->db->query("SELECT * FROM berita WHERE kategori = 'nasional'  ORDER BY id_berita DESC LIMIT 10 ");
- return $query->result();
-
-
-    
-	}
-
-public function allberteknologi(){
- $query = $this->db->get('berita');
- $query = $this->db->query("SELECT * FROM berita WHERE kategori = 'teknologi'  ORDER BY id_berita DESC LIMIT 10 ");
- return $query->result();
-
-
-    
-	}
-
-public function politik1(){
- $query = $this->db->get('berita');
- $query = $this->db->query("SELECT * FROM berita WHERE kategori = 'politik' ORDER BY id_berita DESC LIMIT 1 ");
- return $query->result();
-
-
-    
-	}
-
-public function smpolitik(){
- $query = $this->db->get('berita');
- $query = $this->db->query("SELECT * FROM berita WHERE kategori = 'politik'  ORDER BY id_berita DESC LIMIT 10 ");
- return $query->result();
-
-
-    
-	}
-	public function kesehatanbrs1(){
- $query = $this->db->get('berita');
- $query = $this->db->query("SELECT * FROM berita WHERE kategori = 'kesehatan'  ORDER BY id_berita DESC LIMIT 1 ");
- return $query->result();
-
-	}
-
-public function smukes(){
- $query = $this->db->get('berita');
- $query = $this->db->query("SELECT * FROM berita WHERE kategori = 'kesehatan' ORDER BY id_berita DESC LIMIT 10 ");
- return $query->result();
-
-
-    
-	}	
-
-
-	
-
-
-
-
-public function nasional(){
-  
-  $query = $this->db->query("SELECT * FROM berita WHERE kategori = 'nasional' ORDER BY id_berita DESC LIMIT 2 ");
-		return $query;
-	}
-
-public function politik(){
-  
-  $query = $this->db->query("SELECT * FROM berita WHERE kategori = 'politik' ORDER BY id_berita DESC LIMIT 2 ");
-		return $query;
-	}
-
-	public function teknologi(){
-  
-  return $query = $this->db->query("SELECT * FROM berita WHERE kategori = 'teknologi' ORDER BY id_berita DESC LIMIT 5 ");
-		return $query;
-	}
 
 	public function get_product_keyword($keyword){
 			$this->db->select('*');
@@ -247,8 +133,8 @@ public function politik(){
 
 
 
-	function datapolitik($number,$offset){
-		return $query = $this->db->get('berita',$number,$offset)->result();		
+	function all(){
+	return $query = $this->db->query("SELECT * FROM kegiatan");		
 	}
 
 public function admin_sm_berita(){
