@@ -183,7 +183,6 @@ public function user(){
 
 
 $data['sm_user'] = $this->model_berita->admin_sm_user();
-$data['dtbidang'] = $this->model_berita->admin_dtbidang();
 $this->load->view('config/user', $data);
 
 		}
@@ -647,7 +646,7 @@ function post_user(){
         $username = $this->input->post('username');
         $level = $this->input->post('level');
         $password = md5($this->input->post('password'));
-        $kategori = $this->input->post('kategori');
+        $level = $this->input->post('level');
         
         
         $data = array(
@@ -655,7 +654,7 @@ function post_user(){
             'level' => $level,
             'username' => $username,
             'password' => $password,
-            'kategori' => $kategori,
+            'level' => $level,
         
             );
         $this->session->set_flashdata('message', 'Berhasil Di Tambah');
