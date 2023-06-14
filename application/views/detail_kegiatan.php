@@ -71,23 +71,23 @@
           </div>
                     <div class="form-group">
             <label>Total Hari Kerja</label>
-              <input type="number" class="form-control" readonly="">
+              <input type="number" class="form-control" readonly="" value="<?php echo $result->total_hari_kerja; ?>">
           
           </div>   
            <div class="form-group">
             <label>Dana Kegiatan</label>
-              <input type="number" class="form-control" readonly="">
+              <input type="number" class="form-control" readonly="" value="<?php echo $result->dana_kegiatan; ?>">
           
           </div>
    
            <div class="form-group">
             <label>Kota Tujuan</label>
-              <input type="text" class="form-control" readonly="">
+              <input type="text" class="form-control" readonly="" value="<?php echo $result->kota_tujuan; ?>">
           
           </div>
             <div class="form-group">
             <label>No Laporan</label>
-              <input type="text" class="form-control" readonly="">
+              <input type="text" class="form-control" readonly="" value="<?php echo $result->no_laporan; ?>">
           
           </div>
           <div class="form-group">
