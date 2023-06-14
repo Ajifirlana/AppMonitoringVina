@@ -589,7 +589,7 @@ public function edit_user()
         $this->form_validation->set_rules('id_user', 'id_user', 'required');
          $this->form_validation->set_rules('username', 'username', 'required');
 
-         $this->form_validation->set_rules('kategori', 'kategori', 'required');
+         $this->form_validation->set_rules('level', 'level', 'required');
       
      
         if($this->form_validation->run()==FALSE){
@@ -598,7 +598,7 @@ public function edit_user()
         }else{
             $data=array(
                 "username"=>$_POST['username'],
-                "kategori"=>$_POST['kategori'],
+                "level"=>$_POST['level'],
             );
             $this->db->where('id_user', $_POST['id_user']);
             $this->db->update('user',$data);

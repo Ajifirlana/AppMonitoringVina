@@ -207,7 +207,14 @@
             <label>Password</label>
           <input type="text" name="password" autocomplete="off" class="form-control" cols="30" rows="3">
           </div>
-           
+            <div class="form-group">
+            <label>Level</label>
+          <select name="level" autocomplete="off" required class="form-control" cols="30" rows="3">
+            <option value="Admin">Admin</option>
+            <option value="Pegawai">Pegawai</option>
+            <option value="Korwas">Korwas</option>
+            </select> 
+          </div>    
         </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
