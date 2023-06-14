@@ -302,67 +302,15 @@
           </div> 
          
          
-                
-          <div class="form-group">
-            <input type="hidden" class="form-control" name="create_by" value="<?php echo $this->session->userdata('id_user'); ?>">
-
-            <input type="hidden" class="form-control" name="username" value="<?php echo $this->session->userdata('username'); ?>">
-            
-
-            <label>Kategori Bidang</label>
-
-
-    
-            <select name="kategori" id="kategori" class="form-control" required="">
-              <?php 
-
-
-          foreach ($dtbidang->result() as $row) {
-           ?> 
-              <option value="<?php echo $row->nama_lengkap; ?>"><?php echo $row->nama_lengkap; ?></option>
-
-
-          <?php } ?>
-            
-            </select>
-          
-          <script type="text/javascript">
-    $(document).ready(function(){
-        $('#kategori').change(function(){
-            var id=$(this).val();
-            $.ajax({
-                url : "<?php echo base_url();?>index.php/kategori/get_subkategori",
-                method : "POST",
-                data : {id: id},
-                async : false,
-                dataType : 'json',
-                success: function(data){
-                    var html = '';
-                    var i;
-                    for(i=0; i<data.length; i++){
-                        html += '<option>'+data[i].subkategori_nama+'</option>';
-                    }
-                    $('.subkategori').html(html);
-                     
-                }
-            });
-        });
-    });
-</script>
-
           </div>
 
-          <div class="form-group">
-            <label>File</label>
-            <input type="file" class="form-control" name="image" required="">
-          </div>
-        
+  
 
-        </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             <button type="submit" class="btn btn-warning"><i class="icon-pencil5"></i> Edit</button>
           </div>
+        </div>
         </form>
 
      </div>
