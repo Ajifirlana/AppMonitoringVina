@@ -106,43 +106,9 @@
 
 
     
-            <select name="kategori" id="kategori" class="form-control" required="">
-              <?php 
-
-
-          foreach ($dtbidang->result() as $row) {
-           ?> 
-              <option value="<?php echo $row->nama_lengkap; ?>"><?php echo $row->nama_lengkap; ?></option>
-
-
-          <?php } ?>
-            
-            </select>
-          
-          <script type="text/javascript">
-    $(document).ready(function(){
-        $('#kategori').change(function(){
-            var id=$(this).val();
-            $.ajax({
-                url : "<?php echo base_url();?>index.php/kategori/get_subkategori",
-                method : "POST",
-                data : {id: id},
-                async : false,
-                dataType : 'json',
-                success: function(data){
-                    var html = '';
-                    var i;
-                    for(i=0; i<data.length; i++){
-                        html += '<option>'+data[i].subkategori_nama+'</option>';
-                    }
-                    $('.subkategori').html(html);
-                     
-                }
-            });
-        });
-    });
-</script>
-
+            <input type="text"  name="kategori" id="kategori" class="form-control" required="">
+              
+    
           </div>
 
           <div class="form-group">
