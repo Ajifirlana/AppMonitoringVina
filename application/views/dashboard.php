@@ -260,45 +260,35 @@
             <?php
             $tgl = date('Y-m-d');
             { ?>
-            <input type="date" class="form-control" required="" value="<?php echo $tgl; ?>">
+            <input type="date" class="form-control" required="" name="tgl_mulai_tugas" value="<?php echo $tgl; ?>">
             <?php }?>
           </div>
              <div class="form-group">
             <label>Total Hari Kerja</label>
-              <input type="number" class="form-control" required="">
+              <input type="number" class="form-control" required="" name="total_hari_kerja" value="<?=$row->total_hari_kerja;?>">
           
           </div>  
 
            <div class="form-group">
             <label>Dana Kegiatan</label>
-              <input type="number" class="form-control" required="">
+              <input type="number"  value="<?=$row->dana_kegiatan;?>" name="dana_kegiatan" class="form-control" required="">
           
           </div>
    
            <div class="form-group">
             <label>Kota Tujuan</label>
-              <input type="text" class="form-control" required="">
+              <input type="text" class="form-control" name="kota_tujuan"  value="<?=$row->kota_tujuan;?>" required="">
           
           </div>
             <div class="form-group">
             <label>No Laporan</label>
-              <input type="text" class="form-control" required="">
+              <input type="text" class="form-control" name="no_laporan"  value="<?=$row->no_laporan;?>"required="">
           
           </div>
           <div class="form-group">
             <label>Nama Kegiatan</label>
-            <select name="kategori" class="form-control" required="">
-              <?php 
-
-
-          foreach ($dtbidang->result() as $r) {
-           ?> 
-              <option value="<?php echo $r->nama_lengkap; ?>"><?php echo $r->nama_lengkap; ?></option>
-
-
-          <?php } ?>
-            
-            </select>
+            <input type="" name="kategori" class="form-control" required="" value="<?=$row->kategori;?>">
+             
           </div> 
          
          

@@ -108,11 +108,11 @@
     
             <input type="text"  name="kategori" id="kategori" class="form-control" required="">
               
-    
+
           </div>
 
           <div class="form-group">
-            <label>File</label>
+            <label>Surat Tugas</label>
             <input type="file" class="form-control" name="image" required="">
           </div>
         </div>
