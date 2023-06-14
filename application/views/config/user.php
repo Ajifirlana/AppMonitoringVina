@@ -203,10 +203,6 @@
           <input type="text" name="username" autocomplete="off" value="<?=$row->username;?>" required placeholder="Masukkan Modal" class="form-control" cols="30" rows="3">
           </div>
 
-          <div class="form-group">
-            <label>Password</label>
-          <input type="text" name="password" autocomplete="off" class="form-control" cols="30" rows="3">
-          </div>
             <div class="form-group">
             <label>Level</label>
           <select name="level" autocomplete="off" required class="form-control" cols="30" rows="3">
