@@ -454,6 +454,11 @@ public function edit_berita()
                 "created_at"=>$_POST['created_at'],
                 "capaian"=>$_POST['capaian'],
                 "keterangan"=>$_POST['keterangan'],
+                "tgl_mulai_tugas"=>$this->input->post('tgl_mulai_tugas'),
+                "total_hari_kerja"=>$this->input->post('total_hari_kerja'),
+                "dana_kegiatan"=>$this->input->post('dana_kegiatan'),
+                "kota_tujuan"=>$this->input->post('kota_tujuan'),
+                "no_laporan"=>$this->input->post('no_laporan'),
             );
             $this->db->where('id_berita', $_POST['id_berita']);
             $this->db->update('kegiatan',$data);
