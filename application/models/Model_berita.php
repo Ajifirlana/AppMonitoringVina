@@ -123,11 +123,12 @@ var $gallery_path_url;
 	}
 
 
-	public function get_product_keyword($keyword){
+	public function get_product_keyword($kategori,$tglmulai,$tglakhir){
 			$this->db->select('*');
 			$this->db->from('kegiatan_user');
-			$this->db->like('created_at',$keyword);
-			$this->db->or_like('kategori',$keyword);
+			$this->db->like('kategori',$kategori);
+			$this->db->where('created_at',$tglmulai);
+			$this->db->where('created_at',$tglakhir);
 			return $this->db->get()->result();
 		}
 

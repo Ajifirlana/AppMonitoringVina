@@ -45,19 +45,8 @@
           <tr>
             <?php echo form_open('index.php/dashboard/search') ?>
        
-            <th><select name="kategori" class="form-control" required="">
-              <?php 
-
-
-          foreach ($dtbidang->result() as $row) 
-          {
-           ?> 
-              <option value="<?php echo $row->nama_lengkap; ?>"><?php echo $row->nama_lengkap; ?></option>
-
-
-          <?php } ?>
-            
-            </select>
+            <th><input type="text" name="kategori" class="form-control" required="">
+             
           </th>
             <th><input type="date" class="form-control" name="tglmulai" placeholder="search" required="">
 

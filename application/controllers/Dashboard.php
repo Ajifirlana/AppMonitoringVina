@@ -171,9 +171,10 @@ public function filter($id)
 
 public function search(){
 
-            $keyword = $this->input->post('kategori','tglmulai','tglakhir');
-    
-            $data['sm_berita']=$this->model_berita->get_product_keyword($keyword);
+            $kategori = $this->input->post('kategori');
+         $tglmulai = $this->input->post('tglmulai');
+        $tglakhir=$this->input->post('tglakhir');
+            $data['sm_berita']=$this->model_berita->get_product_keyword($kategori,$tglmulai,$tglakhir);
 
 $data['dtbidang'] = $this->model_berita->admin_dtbidang();
             $this->load->view('config/laporan',$data);
