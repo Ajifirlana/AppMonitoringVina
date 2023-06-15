@@ -177,7 +177,7 @@ public function laporan_sm_user(){
 	}
 
 public function laporan_user(){
-    return $query = $this->db->query("SELECT * FROM kegiatan WHERE kategori='".$this->session->kategori."'");
+    return $query = $this->db->query("SELECT * FROM kegiatan ORDER BY id_berita DESC");
     
 	}
 public function laporan_ku(){

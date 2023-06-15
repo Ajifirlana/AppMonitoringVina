@@ -61,6 +61,7 @@
             <th>Surat</th>
             <th>Tim Anggota</th>
             <th>Keterangan</th>
+            <th>Aksi</th>
           </tr>
           </thead>
           <tbody>
@@ -94,7 +95,8 @@ $link = set_linkurl($id,$ktgr);
               ?>
             </td>
             <td><?php echo $row->keterangan; ?></td>
-
+<td>
+<a button class="btn btn-warning btn-flat btn-xs ml-2" href="<?php echo base_url('dashboard/detail_kegiatan/'.$row->id_berita) ?>"><i class="fa fa-eye"></i></a></td>
 
          
             

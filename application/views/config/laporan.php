@@ -162,9 +162,10 @@ $link = set_linkurl($id,$ktgr);
 
              <td><a href="<?php echo base_url(); ?>index.php/dashboard/proses_hapus_kgiatanuser/<?php echo $row->id_berita; ?>">Hapus</a></td>
              <?php ?>
+             <?php if ($this->session->userdata('level') == 'Korwas') {?>
              <td><a href="<?php echo base_url(); ?>index.php/dashboard/terimaLaporan/<?php echo $id; ?>">Terima</a></td>
              <td><a href="<?php echo base_url(); ?>index.php/dashboard/tolakLaporan/<?php echo $id; ?>">Tolak</a></td>
-
+            <?php  }?>
              
            
           </tr>
