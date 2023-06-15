@@ -76,8 +76,6 @@
           <tr>
             <th>Username</th>
             <th>Role</th>
-            <th>Kategori</th>
-            
             <th>Aksi</th>
           </tr>
           </thead>
@@ -89,7 +87,6 @@
           <tr>
              <td><?php echo $row->username; ?></td>
              <td><?php echo $row->level; ?></td>
-             <td><?php echo $row->kategori; ?></td>
             <td>
 
  <a data-toggle="modal" data-target="#modal-edit<?=$row->id_user;?>" button class="btn btn-info btn-flat btn-xs" data-popup="tooltip" data-placement="top" title="Edit Data"><i class="fa fa-pencil-square-o"></i></a>

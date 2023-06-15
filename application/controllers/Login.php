@@ -52,7 +52,7 @@ class Login extends CI_Controller {
                                 <strong>Selamat Datang '.$user->username.'</strong>'.$error.'.
                              </div>'
                            );
-                redirect('dashboard');
+                redirect('dashboard/menu_utama');
         }else{
 
         $this->session->set_flashdata('msg',
