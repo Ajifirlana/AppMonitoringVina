@@ -133,19 +133,6 @@
        <?php 
         if ($this->session->userdata('level') == 'Pegawai') {
          ?>
-          <li class="treeview">
-          <a href="#">
-            <i class="fa fa-user"></i> <span>Pengguna</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-
-            <li><a href="<?php echo base_url();?>dashboard/user"><i class="fa fa-inbox"></i>Data Pengguna</a></li>
-
-          </ul>
-        </li>
          <li class="treeview">
           <a href="<?php echo base_url();?>dashboard/kegiatan_user">
             <i class="fa fa-files-o"></i> <span>Kegiatan</span>
