@@ -134,7 +134,7 @@
           <input type="hidden" readonly value="<?=$row->id_berita;?>" name="id_berita" class="form-control" >
  
  <div class="form-group">
-            <label>Kategori</label>
+            <label>Nama Kegiatan</label>
             <br>
             <label>"<?=$row->kategori;?>"</label>
           </div>
