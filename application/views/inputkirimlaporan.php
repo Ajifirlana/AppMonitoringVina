@@ -38,17 +38,6 @@
     <table id="kategori" class="table table-bordered table-striped">
       <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
         <div class="box-body">
-         
-          <div class="form-group">
-            <input type="hidden" class="form-control" name="create_by" value="<?php echo $this->session->userdata('id_user'); ?>">
-
-            <input type="hidden" class="form-control" name="username" value="<?php echo $this->session->userdata('username'); ?>">
-
-             <input type="hidden" class="form-control" name="kategori" value="<?php echo $this->session->userdata('kategori'); ?>">
-        
-          
-          </div>
-
            <div class="form-group">
             <label>Tanggal</label>
             <?php 
@@ -57,6 +46,19 @@
             <input type="date" class="form-control" name="created_at" required="" value="<?php echo $tgl; ?>">
             <?php }?>
           </div>
+<div class="form-group" 
+>
+            <label>Nama Kegiatan</label>
+             <input type="text" class="form-control" name="nama_kegiatan">
+        </div>         
+          <div class="form-group">
+            <input type="hidden" class="form-control" name="create_by" value="<?php echo $this->session->userdata('id_user'); ?>">
+
+            <input type="hidden" class="form-control" name="username" value="<?php echo $this->session->userdata('username'); ?>">
+
+          
+          </div>
+
 
           <div class="form-group">
             <label>File</label>
@@ -67,7 +69,7 @@
           </div>
         
           <div class="form-group">
-            <label>Keterangan</label>
+            <label>No Surat Tugas</label>
               <input type="text" class="form-control" name="keterangan" required="">
           
           </div>

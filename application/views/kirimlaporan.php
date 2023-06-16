@@ -65,7 +65,7 @@
 
             <th>Tanggal</th>
             <th>File</th>
-            <th>Keterangan</th>
+            <th>No Surat Tugas</th>
             <th>Validasi</th>
             <th>Aksi</th>
           </tr>

@@ -380,7 +380,7 @@ if (isset($_POST['btnsimpan'])) {
               $keterangan          = htmlentities(strip_tags($_POST['keterangan']));
               $username            = htmlentities(strip_tags($_POST['username']));
               $create_by            = htmlentities(strip_tags($_POST['create_by']));
-              $kategori            = htmlentities(strip_tags($_POST['kategori']));
+              $kategori            = htmlentities(strip_tags($_POST['nama_kegiatan']));
              
 
               $file_size = 5500; //5 MB
