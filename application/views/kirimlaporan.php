@@ -64,6 +64,7 @@
             <th>No.</th>
 
             <th>Tanggal</th>
+            <th>Nama Kegitan</th>
             <th>File</th>
             <th>No Surat Tugas</th>
             <th>Validasi</th>
@@ -80,6 +81,7 @@
             <td><?php echo $no; ?></td>
 
             <td><?php echo $tgl; ?></td>
+            <td><?php echo $row->kategori; ?></td>
             <td align="center"><a data-toggle="modal" data-target="#modal-hapus<?=$row->id_berita;?>"><img src="<?php echo site_url();?>uploads/<?php echo $row->image; ?>" width="100px" height="100px" alt=""></td>
            </td>
             <td><?php echo $row->keterangan; ?></td>
