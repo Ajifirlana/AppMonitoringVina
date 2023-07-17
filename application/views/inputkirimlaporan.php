@@ -39,17 +39,17 @@
       <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
         <div class="box-body">
            <div class="form-group">
-            <label>Tanggal</label>
-            <?php 
-            $tgl = date('Y-m-d');
-            { ?>
-            <input type="date" class="form-control" name="created_at" required="" value="<?php echo $tgl; ?>">
-            <?php }?>
+            
           </div>
 <div class="form-group" 
 >
             <label>Nama Kegiatan</label>
-             <input type="text" class="form-control" name="nama_kegiatan">
+            <select  name="nama_kegiatan"class="form-control">
+              <?php foreach ($id_kegiatan->result() as $row) {?>
+              <option value="<?= $row->id_berita ?>"><?= $row->kategori ?></option>
+              <?php }?>
+            </select>
+            
         </div>         
           <div class="form-group">
             <input type="hidden" class="form-control" name="create_by" value="<?php echo $this->session->userdata('id_user'); ?>">

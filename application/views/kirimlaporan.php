@@ -64,7 +64,7 @@
             <th>No.</th>
 
             <th>Tanggal</th>
-            <th>Nama Kegitan</th>
+            <th>Nama Kegiatan</th>
             <th>File</th>
             <th>No Surat Tugas</th>
             <th>Validasi</th>
@@ -127,21 +127,16 @@
       <div class="modal-content">
         <div class="modal-header bg-primary">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Tampil Data Kegiatan</h4>
+          <h4 class="modal-title">Tampil Laporan Kegiatan</h4>
         </div>
         <div class="modal-body">
  
           <input type="hidden" readonly value="<?=$row->id_berita;?>" name="id_berita" class="form-control" >
  
- <div class="form-group">
-            <label>Nama Kegiatan</label>
-            <br>
-            <label>"<?=$row->kategori;?>"</label>
-          </div>
-
+ 
             
         
-            <center><label>Foto Kegiatan</label></center>
+            <center><label>Laporan Kegiatan</label></center>
           
             <td><center> 
 <embed src="<?php echo site_url();?>uploads/<?php echo $row->image; ?>" frameborder="0" width="100%" height="400px">

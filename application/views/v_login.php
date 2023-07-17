@@ -16,7 +16,7 @@ $tgl_exp ="2024";
 
 <div class="login-box">
   <div class="login-logo">
-   <b>Aplikasi Monitoring Tugas Luar</b>
+   <b>Aplikasi Monitoring</b>
     
   </div>
   <!-- /.login-logo -->

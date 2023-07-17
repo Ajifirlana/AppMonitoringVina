@@ -124,13 +124,24 @@ $this->db->where('id_user', $_POST['id_user']);
   }
 
 public function laporan(){
-
-$data['dtbidang'] = $this->model_berita->admin_dtbidang();
-$this->load->model('model_berita');
+  
+$data['kategori'] = $this->model_berita->all();
 $data['sm_berita'] = $this->model_berita->laporan();
 $this->load->view('config/laporan', $data);
 		}
 
+    public function search(){
+     
+$data['kategori'] = $this->model_berita->all();
+      $kategori = $this->input->post('kategori');
+        
+      $tglmulai = $this->input->post('tglmulai');
+            $tglakhir=$this->input->post('tglakhir');
+                $data['sm_berita']=$this->model_berita->get_product_keyword($kategori,$tglmulai,$tglakhir);
+  
+                $this->load->view('config/search',$data);
+            }
+    
 public function laporan_pengguna(){
 
 
@@ -168,17 +179,6 @@ public function filter($id)
   $this->load->library('mypdf');
   $this->mypdf->generate('Laporan/cetak', $dt, 'laporan-mahasiswa', 'A4', 'portrait');
  }
-
-public function search(){
-
-            $kategori = $this->input->post('kategori');
-         $tglmulai = $this->input->post('tglmulai');
-        $tglakhir=$this->input->post('tglakhir');
-            $data['sm_berita']=$this->model_berita->get_product_keyword($kategori,$tglmulai,$tglakhir);
-
-$data['dtbidang'] = $this->model_berita->admin_dtbidang();
-            $this->load->view('config/laporan',$data);
-        }
 
 public function user(){
 
@@ -368,10 +368,10 @@ redirect('index.php/dashboard/tambah_kegiatan');
 		}
 
 public function tmbhkirimlaporan(){
-
+  $data['id_kegiatan'] = $this->model_berita->laporan_user();
 
 $data['dtbidang'] = $this->model_berita->admin_dtbidang();
-$data['berita'] = $this->model_berita->all();
+//$data['berita'] = $this->model_berita->all();
 $this->load->view('inputkirimlaporan', $data);
 
 

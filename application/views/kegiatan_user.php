@@ -56,9 +56,9 @@
           <tr>
             <th>No.</th>
 
-            <th>Bidang</th>
-            <th>Tanggal</th>
-            <th>Surat</th>
+            <th>Kegiatan</th>
+            <th>Jadwal Kegiatan</th>
+            <th>Surat Tugas</th>
             <th>Tim Anggota</th>
             <th>Keterangan</th>
             <th>Aksi</th>

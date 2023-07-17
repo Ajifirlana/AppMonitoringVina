@@ -85,9 +85,6 @@
           <ul class="treeview-menu">
             <li><a href="<?php echo base_url();?>dashboard/laporan"><i class="fa fa-inbox"></i>Data Laporan</a></li>
           </ul>
-          <ul class="treeview-menu">
-            <li><a href="<?php echo base_url();?>dashboard/laporan_pengguna"><i class="fa fa-inbox"></i>Laporan Data Pengguna </a></li>
-          </ul>
         </li>
         
       <?php } ?>
@@ -111,9 +108,7 @@
           <ul class="treeview-menu">
             <li><a href="<?php echo base_url();?>dashboard/laporan"><i class="fa fa-inbox"></i>Data Laporan</a></li>
           </ul>
-          <ul class="treeview-menu">
-            <li><a href="<?php echo base_url();?>dashboard/laporan_pengguna"><i class="fa fa-inbox"></i>Laporan Data Pengguna </a></li>
-          </ul>
+          
         </li>
         
       <?php } ?>

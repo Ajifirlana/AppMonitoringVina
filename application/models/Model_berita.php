@@ -126,9 +126,9 @@ var $gallery_path_url;
 	public function get_product_keyword($kategori,$tglmulai,$tglakhir){
 			$this->db->select('*');
 			$this->db->from('kegiatan_user');
-			$this->db->like('kategori',$kategori);
-			$this->db->where('created_at',$tglmulai);
-			$this->db->where('created_at',$tglakhir);
+			$this->db->like('kategori', $kategori);
+			$this->db->where('created_at >=', $tglmulai);
+        $this->db->where('created_at <=', $tglakhir);
 			return $this->db->get()->result();
 		}
 
@@ -149,8 +149,21 @@ public function admin_sm_berita(){
 	}
 
 public function laporan(){
-    return $query = $this->db->query("SELECT * FROM kegiatan_user")->result();
+    return $query = $this->db->query("SELECT * FROM kegiatan_user JOIN kegiatan WHERE kegiatan.id_berita=kegiatan_user.kategori ")->result();
     
+	}
+	
+public function laporan_ku(){
+	
+	$this->db->select('kegiatan_user.*,
+	kegiatan.kategori');
+$this->db->from('kegiatan_user');
+$this->db->join('kegiatan', 'kegiatan.id_berita = kegiatan_user.kategori', 'LEFT');
+$this->db->where('kegiatan_user.create_by', $this->session->id_user);
+ $this->db->order_by('id_berita', 'DESC');
+$query = $this->db->get();
+return $query;
+
 	}
 
 public function admin_dtbidang(){
@@ -179,10 +192,6 @@ public function laporan_sm_user(){
 
 public function laporan_user(){
     return $query = $this->db->query("SELECT * FROM kegiatan ORDER BY id_berita DESC");
-    
-	}
-public function laporan_ku(){
-    return $query = $this->db->query("SELECT * FROM kegiatan_user WHERE create_by='".$this->session->id_user."'");
     
 	}
 

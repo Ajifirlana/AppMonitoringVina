@@ -129,7 +129,8 @@
           <?php 
           $no = $this->uri->segment('3') + 1;
           foreach ($sm_berita as $row) {
-            
+            $kat = $this->model_berita->detail_kegiatan($row->kategori);
+
  $tgl = tgl_indo($row->created_at); 
                 
             $id = $row->id_berita;
@@ -140,7 +141,7 @@ $link = set_linkurl($id,$ktgr);
             <td><?php echo $no; ?></td>
             <td><?php echo $tgl; ?></td>
 
-            <td><?php echo $row->kategori; ?></td>
+            <td><?php echo $kat->kategori; ?></td>
             <td><?php echo $row->keterangan; ?></td>
             <td><?php 
               if($row->Validasi == 'Sudah Valid'){
