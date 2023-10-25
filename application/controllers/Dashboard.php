@@ -7,17 +7,15 @@ class Dashboard extends CI_Controller{
 
 	function __construct(){
 		parent::__construct();	
+        $this->load->helper('cleanurl_helper');
+        $this->load->model('m_login');
+        $this->load->model('model_berita');
+        $this->load->library('pagination');
+        $this->load->helper(array('url','html','file','form','download'));
 
-$this->load->helper('cleanurl_helper');
-$this->load->model('m_login');
-$this->load->model('model_berita');
-$this->load->library('pagination');
-$this->load->helper(array('url','html','file','form','download'));
-
- if( ! $this->session->userdata('id_user')) 
-            redirect('login'); 
-
-	}
+        if( ! $this->session->userdata('id_user')) 
+                    redirect('login'); 
+        	}
 
 public function index(){
 
