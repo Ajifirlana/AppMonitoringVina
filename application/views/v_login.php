@@ -6,7 +6,7 @@ $tgl_exp ="2024";
          ?>
 
       <script type="text/javascript" language="javascript">
-                alert("Masa Berlaku Telah Habis Silahkan Hubungi Programmer...!!!");
+                alert("Masa Berlaku Telah Habis Silahkan Hubungi Wa 089531941653!!!");
               </script>
        <?php }else{?>        
        
